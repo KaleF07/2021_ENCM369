@@ -1,2 +1,3 @@
 Kale,Fordham,kale.fordham@ucalgary.ca,KaleF07,2021_ENCM369
 Omar,Mohamed,omar.mohamed2@ucalgary.ca,the-miro,2021_ENCM369
+Mitchell,Rhead,mitchell.rhead@ucalgary.ca,@mrhead1,2021_ENCM369
