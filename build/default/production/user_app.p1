@@ -1,4 +1,11 @@
 Version 4.0 HI-TECH Software Intermediate Code
+"45585 C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h
+[; ;C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 45585: extern volatile unsigned char LATA __attribute__((address(0x4BE)));
+[v _LATA `Vuc ~T0 @X0 0 e@1214 ]
+[v F183 `(v ~T0 @X0 1 tf1`ul ]
+"12 C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\builtins.h
+[v __delay `JF183 ~T0 @X0 0 e ]
+[p i __delay ]
 "30 ./configuration.h
 [p x FEXTOSC  =  OFF     ]
 "31
@@ -2543,7 +2550,33 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _UserAppRun ]
 [f ]
+"97
+[; ;user_app.c: 97:    u8 counter = 0x80;
+[v _counter `uc ~T0 @X0 1 a ]
+[e = _counter -> -> 128 `i `uc ]
+"98
+[; ;user_app.c: 98:     while (counter < 0xC0) {
+[e $U 2274  ]
+[e :U 2275 ]
+{
 "99
-[; ;user_app.c: 99: }
+[; ;user_app.c: 99:         LATA = counter;
+[e = _LATA _counter ]
+"100
+[; ;user_app.c: 100:         _delay(0x291F12);
+[e ( __delay (1 -> -> 2694930 `l `ul ]
+"101
+[; ;user_app.c: 101:         counter++;
+[e ++ _counter -> -> 1 `i `uc ]
+"102
+[; ;user_app.c: 102:     }
+}
+[e :U 2274 ]
+"98
+[; ;user_app.c: 98:     while (counter < 0xC0) {
+[e $ < -> _counter `i -> 192 `i 2275  ]
+[e :U 2276 ]
+"104
+[; ;user_app.c: 104: }
 [e :UE 2273 ]
 }
