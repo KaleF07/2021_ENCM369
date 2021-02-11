@@ -57,9 +57,9 @@ __HnvFARRAM 0 0 FARRAM 0
 __LnvFARRAM 0 0 FARRAM 0
 __size_of_UserAppInitialize 0 0 ABS 0
 _SysTickSetup 1FF80 0 CODE 0
-UserAppRun@counter 510 0 COMRAM 1
 __Hdata 0 0 ABS 0
 __Ldata 0 0 ABS 0
+UserAppRun@u8counter 510 0 COMRAM 1
 stackhi 25FF 0 ABS 0
 __Htemp 0 0 COMRAM 1
 __Ltemp 0 0 COMRAM 1
@@ -252,7 +252,7 @@ text6 1FF58 1FF59 CODE 1FF58 0
 %locals
 dist/default/production\2021_ENCM369.production.o
 C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h
-C:\Users\kalef\AppData\Local\Temp\sg88.s
+C:\Users\kalef\AppData\Local\Temp\s33g.s
 5081 1FF6E 0 CODE 0
 5083 1FF6E 0 CODE 0
 5086 1FF6E 0 CODE 0

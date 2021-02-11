@@ -94,11 +94,11 @@ Promises:
 */
 void UserAppRun(void)
 {
-   u8 counter = 0x80;
-    while (counter < 0xC0) {
-        LATA = counter;
+   u8 u8counter = 0x80;
+    while (u8counter < 0xC0) {
+        LATA = u8counter;
         _delay(0x291F12);
-        counter++;
+        u8counter++;
     } 
 
 } /* end UserAppRun */
