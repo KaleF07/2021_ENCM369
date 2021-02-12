@@ -94,11 +94,11 @@ Promises:
 */
 void UserAppRun(void)
 {
-   u8 u8counter = 0x80;
-    while (u8counter < 0xC0) {
-        LATA = u8counter;
+   u8 u8counter = 0x80; // Initialize counter
+    while (u8counter < 0xC0) { // creates a while loop for counter < C0
+        LATA = u8counter;      // to ensure MSB stays on during the loop
         _delay(0x291F12);
-        u8counter++;
+        u8counter++;           // counter increases by one after every delay
     } 
 
 } /* end UserAppRun */
