@@ -27317,16 +27317,19 @@ void UserAppInitialize(void)
 # 95 "../../../PIC_Activity3/Code/user_app.c"
 void UserAppRun(void)
 {
-    u32 u32counter = 0x00;
+    static u32 u32switch = 0x11;
+    static u32 u32counter = 0x00;
 
     if (PORTB == 0) {
         u32counter = 0x01;
+        u32switch += 0x01;
     }
 
     while(u32counter) {
         if(PORTB) {
             LATA ++;
             u32counter = 0x00;
+            u32switch -= 0x01;
         }
     }
 

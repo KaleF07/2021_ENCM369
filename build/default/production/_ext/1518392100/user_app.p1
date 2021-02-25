@@ -2550,59 +2550,73 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _UserAppRun ]
 [f ]
 "97
-[; ;../../../PIC_Activity3/Code/user_app.c: 97:     u32 u32counter = 0x00;
-[v _u32counter `ul ~T0 @X0 1 a ]
-[e = _u32counter -> -> -> 0 `i `l `ul ]
-"99
-[; ;../../../PIC_Activity3/Code/user_app.c: 99:     if (PORTB == 0) {
+[; ;../../../PIC_Activity3/Code/user_app.c: 97:     static u32 u32switch = 0x11;
+[v F15920 `ul ~T0 @X0 1 s u32switch ]
+[i F15920
+-> -> -> 17 `i `l `ul
+]
+"98
+[; ;../../../PIC_Activity3/Code/user_app.c: 98:     static u32 u32counter = 0x00;
+[v F15921 `ul ~T0 @X0 1 s u32counter ]
+[i F15921
+-> -> -> 0 `i `l `ul
+]
+"100
+[; ;../../../PIC_Activity3/Code/user_app.c: 100:     if (PORTB == 0) {
 [e $ ! == -> _PORTB `i -> 0 `i 2274  ]
 {
-"100
-[; ;../../../PIC_Activity3/Code/user_app.c: 100:         u32counter = 0x01;
-[e = _u32counter -> -> -> 1 `i `l `ul ]
 "101
-[; ;../../../PIC_Activity3/Code/user_app.c: 101:     }
+[; ;../../../PIC_Activity3/Code/user_app.c: 101:         u32counter = 0x01;
+[e = F15921 -> -> -> 1 `i `l `ul ]
+"102
+[; ;../../../PIC_Activity3/Code/user_app.c: 102:         u32switch += 0x01;
+[e =+ F15920 -> -> -> 1 `i `l `ul ]
+"103
+[; ;../../../PIC_Activity3/Code/user_app.c: 103:     }
 }
 [e :U 2274 ]
-"103
-[; ;../../../PIC_Activity3/Code/user_app.c: 103:     while(u32counter) {
+"105
+[; ;../../../PIC_Activity3/Code/user_app.c: 105:     while(u32counter) {
 [e $U 2275  ]
 [e :U 2276 ]
 {
-"104
-[; ;../../../PIC_Activity3/Code/user_app.c: 104:         if(PORTB) {
+"106
+[; ;../../../PIC_Activity3/Code/user_app.c: 106:         if(PORTB) {
 [e $ ! != -> _PORTB `i -> 0 `i 2278  ]
 {
-"105
-[; ;../../../PIC_Activity3/Code/user_app.c: 105:             LATA ++;
-[e ++ _LATA -> -> 1 `i `Vuc ]
-"106
-[; ;../../../PIC_Activity3/Code/user_app.c: 106:             u32counter = 0x00;
-[e = _u32counter -> -> -> 0 `i `l `ul ]
 "107
-[; ;../../../PIC_Activity3/Code/user_app.c: 107:         }
+[; ;../../../PIC_Activity3/Code/user_app.c: 107:             LATA ++;
+[e ++ _LATA -> -> 1 `i `Vuc ]
+"108
+[; ;../../../PIC_Activity3/Code/user_app.c: 108:             u32counter = 0x00;
+[e = F15921 -> -> -> 0 `i `l `ul ]
+"109
+[; ;../../../PIC_Activity3/Code/user_app.c: 109:             u32switch -= 0x01;
+[e =- F15920 -> -> -> 1 `i `l `ul ]
+"110
+[; ;../../../PIC_Activity3/Code/user_app.c: 110:         }
 }
 [e :U 2278 ]
-"108
-[; ;../../../PIC_Activity3/Code/user_app.c: 108:     }
+"111
+[; ;../../../PIC_Activity3/Code/user_app.c: 111:     }
 }
 [e :U 2275 ]
-"103
-[; ;../../../PIC_Activity3/Code/user_app.c: 103:     while(u32counter) {
-[e $ != _u32counter -> -> -> 0 `i `l `ul 2276  ]
+"105
+[; ;../../../PIC_Activity3/Code/user_app.c: 105:     while(u32counter) {
+[e $ != F15921 -> -> -> 0 `i `l `ul 2276  ]
 [e :U 2277 ]
-"110
-[; ;../../../PIC_Activity3/Code/user_app.c: 110:     if (LATA == 0xC0) {
+"113
+[; ;../../../PIC_Activity3/Code/user_app.c: 113:     if (LATA == 0xC0) {
 [e $ ! == -> _LATA `i -> 192 `i 2279  ]
 {
-"111
-[; ;../../../PIC_Activity3/Code/user_app.c: 111:         LATA = 0x80;
+"114
+[; ;../../../PIC_Activity3/Code/user_app.c: 114:         LATA = 0x80;
 [e = _LATA -> -> 128 `i `uc ]
-"112
-[; ;../../../PIC_Activity3/Code/user_app.c: 112:     }
+"115
+[; ;../../../PIC_Activity3/Code/user_app.c: 115:     }
 }
 [e :U 2279 ]
-"113
-[; ;../../../PIC_Activity3/Code/user_app.c: 113: }
+"116
+[; ;../../../PIC_Activity3/Code/user_app.c: 116: }
 [e :UE 2273 ]
 }
