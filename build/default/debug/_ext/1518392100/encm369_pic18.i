@@ -27307,13 +27307,13 @@ void ClockSetup(void)
 # 89 "../../../PIC_Activity3/Code/encm369_pic18.c"
 void GpioSetup(void)
 {
+    PORTB = 0x00;
+    ANSELB = 0x01;
+    TRISB = 0x01;
+
     LATA = 0x80;
     ANSELA = 0x00;
     TRISA = 0x00;
-
-    PORTB = 0x20;
-    ANSELB = 0x01;
-    TRISB = 0x01;
 }
 # 113 "../../../PIC_Activity3/Code/encm369_pic18.c"
 void SysTickSetup(void)

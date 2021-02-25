@@ -69,9 +69,9 @@
 "95 C:\Users\kalef\OneDrive - University of Calgary\Year 2 (2020-2021)\Winter\ENCM 369/PIC_Activity3/Code/user_app.c
 [v _UserAppRun UserAppRun `(v  1 e 1 0 ]
 {
-"98
-[v UserAppRun@u8counter u8counter `uc  1 a 1 0 ]
-"104
+"97
+[v UserAppRun@u32counter u32counter `ul  1 a 4 0 ]
+"113
 } 0
 "76
 [v _UserAppInitialize UserAppInitialize `(v  1 e 1 0 ]

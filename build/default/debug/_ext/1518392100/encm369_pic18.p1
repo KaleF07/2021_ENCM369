@@ -1,14 +1,5 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"45585 C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h
-[; ;C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 45585: extern volatile unsigned char LATA __attribute__((address(0x4BE)));
-[v _LATA `Vuc ~T0 @X0 0 e@1214 ]
-"37918
-[; ;C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 37918: extern volatile unsigned char ANSELA __attribute__((address(0x400)));
-[v _ANSELA `Vuc ~T0 @X0 0 e@1024 ]
-"45840
-[; ;C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 45840: extern volatile unsigned char TRISA __attribute__((address(0x4C6)));
-[v _TRISA `Vuc ~T0 @X0 0 e@1222 ]
-"46157
+"46157 C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h
 [; ;C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 46157: extern volatile unsigned char PORTB __attribute__((address(0x4CF)));
 [v _PORTB `Vuc ~T0 @X0 0 e@1231 ]
 "38414
@@ -17,6 +8,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "45902
 [; ;C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 45902: extern volatile unsigned char TRISB __attribute__((address(0x4C7)));
 [v _TRISB `Vuc ~T0 @X0 0 e@1223 ]
+"45585
+[; ;C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 45585: extern volatile unsigned char LATA __attribute__((address(0x4BE)));
+[v _LATA `Vuc ~T0 @X0 0 e@1214 ]
+"37918
+[; ;C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 37918: extern volatile unsigned char ANSELA __attribute__((address(0x400)));
+[v _ANSELA `Vuc ~T0 @X0 0 e@1024 ]
+"45840
+[; ;C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 45840: extern volatile unsigned char TRISA __attribute__((address(0x4C6)));
+[v _TRISA `Vuc ~T0 @X0 0 e@1222 ]
 "37 ../../../PIC_Activity3/Code/encm369_pic18.c
 [; ;../../../PIC_Activity3/Code/encm369_pic18.c: 37: extern volatile u32 G_u32SystemTime1ms;
 [v _G_u32SystemTime1ms `Vul ~T0 @X0 0 e ]
@@ -2565,23 +2565,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _GpioSetup ]
 [f ]
 "91
-[; ;../../../PIC_Activity3/Code/encm369_pic18.c: 91:     LATA = 0x80;
-[e = _LATA -> -> 128 `i `uc ]
+[; ;../../../PIC_Activity3/Code/encm369_pic18.c: 91:     PORTB = 0x00;
+[e = _PORTB -> -> 0 `i `uc ]
 "92
-[; ;../../../PIC_Activity3/Code/encm369_pic18.c: 92:     ANSELA = 0x00;
-[e = _ANSELA -> -> 0 `i `uc ]
-"93
-[; ;../../../PIC_Activity3/Code/encm369_pic18.c: 93:     TRISA = 0x00;
-[e = _TRISA -> -> 0 `i `uc ]
-"95
-[; ;../../../PIC_Activity3/Code/encm369_pic18.c: 95:     PORTB = 0x20;
-[e = _PORTB -> -> 32 `i `uc ]
-"96
-[; ;../../../PIC_Activity3/Code/encm369_pic18.c: 96:     ANSELB = 0x01;
+[; ;../../../PIC_Activity3/Code/encm369_pic18.c: 92:     ANSELB = 0x01;
 [e = _ANSELB -> -> 1 `i `uc ]
-"97
-[; ;../../../PIC_Activity3/Code/encm369_pic18.c: 97:     TRISB = 0x01;
+"93
+[; ;../../../PIC_Activity3/Code/encm369_pic18.c: 93:     TRISB = 0x01;
 [e = _TRISB -> -> 1 `i `uc ]
+"95
+[; ;../../../PIC_Activity3/Code/encm369_pic18.c: 95:     LATA = 0x80;
+[e = _LATA -> -> 128 `i `uc ]
+"96
+[; ;../../../PIC_Activity3/Code/encm369_pic18.c: 96:     ANSELA = 0x00;
+[e = _ANSELA -> -> 0 `i `uc ]
+"97
+[; ;../../../PIC_Activity3/Code/encm369_pic18.c: 97:     TRISA = 0x00;
+[e = _TRISA -> -> 0 `i `uc ]
 "98
 [; ;../../../PIC_Activity3/Code/encm369_pic18.c: 98: }
 [e :UE 2273 ]
