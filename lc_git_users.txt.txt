@@ -1,0 +1,7 @@
+Kale,Fordham,kale.fordham@ucalgary.ca,KaleF07,2021_ENCM369
+Omar,Mohamed,omar.mohamed2@ucalgary.ca,the-miro,2021_ENCM369
+Mitchell,Rhead,mitchell.rhead@ucalgary.ca,@mrhead1,2021_ENCM369
+Adil,Abdulwahab,adil.abdulwahab1@ucalgary.ca,adilzeki,2021_ENCM369
+Ahnaf,Naheen,ahnaf.naheen@ucalgary.ca,naheenahnaf,2021_ENCM369
+Henry,Wang,haoxiang.wang1@ucalgary.ca,hwops,2021_ENCM369
+Joshua,Beauchesne,joshua.beauchesne@ucalgary.ca,RedLinen,2021_ENCM369
