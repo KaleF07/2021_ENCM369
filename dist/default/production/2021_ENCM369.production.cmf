@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\kalef\AppData\Local\Temp\s1pc.o
+$C:\Users\kalef\AppData\Local\Temp\sgcc.o
 idloc IDLOC 5 200000 200000 20 1
 init CODE 0 1FFFC 1FFFC 4 1
 reset_vec CODE 0 0 0 4 1
@@ -129,18 +129,18 @@ $dist/default/production\2021_ENCM369.production.o
 1FF74 text0 CODE >47:C:\Users\kalef\OneDrive - University of Calgary\Year 2 (2020-2021)\Winter\ENCM 369/PIC_Activity3/Code/main.c
 1FF78 text0 CODE >57:C:\Users\kalef\OneDrive - University of Calgary\Year 2 (2020-2021)\Winter\ENCM 369/PIC_Activity3/Code/main.c
 1FF7C text0 CODE >62:C:\Users\kalef\OneDrive - University of Calgary\Year 2 (2020-2021)\Winter\ENCM 369/PIC_Activity3/Code/main.c
-1FF16 cinit CODE >5088:C:\Users\kalef\AppData\Local\Temp\s1pc.s
-1FF16 cinit CODE >5090:C:\Users\kalef\AppData\Local\Temp\s1pc.s
-1FF16 cinit CODE >5093:C:\Users\kalef\AppData\Local\Temp\s1pc.s
-1FF16 cinit CODE >5117:C:\Users\kalef\AppData\Local\Temp\s1pc.s
-1FF1A cinit CODE >5118:C:\Users\kalef\AppData\Local\Temp\s1pc.s
-1FF1C cinit CODE >5119:C:\Users\kalef\AppData\Local\Temp\s1pc.s
-1FF1C cinit CODE >5120:C:\Users\kalef\AppData\Local\Temp\s1pc.s
-1FF1E cinit CODE >5121:C:\Users\kalef\AppData\Local\Temp\s1pc.s
-1FF20 cinit CODE >5122:C:\Users\kalef\AppData\Local\Temp\s1pc.s
-1FF22 cinit CODE >5128:C:\Users\kalef\AppData\Local\Temp\s1pc.s
-1FF22 cinit CODE >5130:C:\Users\kalef\AppData\Local\Temp\s1pc.s
-1FF24 cinit CODE >5131:C:\Users\kalef\AppData\Local\Temp\s1pc.s
+1FF16 cinit CODE >5088:C:\Users\kalef\AppData\Local\Temp\sgcc.s
+1FF16 cinit CODE >5090:C:\Users\kalef\AppData\Local\Temp\sgcc.s
+1FF16 cinit CODE >5093:C:\Users\kalef\AppData\Local\Temp\sgcc.s
+1FF16 cinit CODE >5117:C:\Users\kalef\AppData\Local\Temp\sgcc.s
+1FF1A cinit CODE >5118:C:\Users\kalef\AppData\Local\Temp\sgcc.s
+1FF1C cinit CODE >5119:C:\Users\kalef\AppData\Local\Temp\sgcc.s
+1FF1C cinit CODE >5120:C:\Users\kalef\AppData\Local\Temp\sgcc.s
+1FF1E cinit CODE >5121:C:\Users\kalef\AppData\Local\Temp\sgcc.s
+1FF20 cinit CODE >5122:C:\Users\kalef\AppData\Local\Temp\sgcc.s
+1FF22 cinit CODE >5128:C:\Users\kalef\AppData\Local\Temp\sgcc.s
+1FF22 cinit CODE >5130:C:\Users\kalef\AppData\Local\Temp\sgcc.s
+1FF24 cinit CODE >5131:C:\Users\kalef\AppData\Local\Temp\sgcc.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -159,22 +159,22 @@ __Hspace_1 512 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __Hspace_2 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __Hspace_4 60000A 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\2021_ENCM369.production.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\kalef\AppData\Local\Temp\s1pc.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\kalef\AppData\Local\Temp\sgcc.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\2021_ENCM369.production.o
 __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\2021_ENCM369.production.o
 _LATA 4BE 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
-___sp 0 0 STACK 2 stack C:\Users\kalef\AppData\Local\Temp\s1pc.o
+___sp 0 0 STACK 2 stack C:\Users\kalef\AppData\Local\Temp\sgcc.o
 _main 1FF66 0 CODE 0 text0 dist/default/production\2021_ENCM369.production.o
-start 1FFFC 0 CODE 0 init C:\Users\kalef\AppData\Local\Temp\s1pc.o
+start 1FFFC 0 CODE 0 init C:\Users\kalef\AppData\Local\Temp\sgcc.o
 __size_of_main 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\2021_ENCM369.production.o
 __size_of_SystemSleep 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __Hpowerup 0 0 CODE 0 powerup dist/default/production\2021_ENCM369.production.o
-__accesstop 560 0 ABS 0 - C:\Users\kalef\AppData\Local\Temp\s1pc.o
-intlevel0 0 0 CODE 0 text C:\Users\kalef\AppData\Local\Temp\s1pc.o
-intlevel1 0 0 CODE 0 text C:\Users\kalef\AppData\Local\Temp\s1pc.o
-intlevel2 0 0 CODE 0 text C:\Users\kalef\AppData\Local\Temp\s1pc.o
-intlevel3 0 0 CODE 0 text C:\Users\kalef\AppData\Local\Temp\s1pc.o
+__accesstop 560 0 ABS 0 - C:\Users\kalef\AppData\Local\Temp\sgcc.o
+intlevel0 0 0 CODE 0 text C:\Users\kalef\AppData\Local\Temp\sgcc.o
+intlevel1 0 0 CODE 0 text C:\Users\kalef\AppData\Local\Temp\sgcc.o
+intlevel2 0 0 CODE 0 text C:\Users\kalef\AppData\Local\Temp\sgcc.o
+intlevel3 0 0 CODE 0 text C:\Users\kalef\AppData\Local\Temp\sgcc.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\2021_ENCM369.production.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\2021_ENCM369.production.o
 __Hifardata 0 0 CODE 0 ifardata dist/default/production\2021_ENCM369.production.o
@@ -183,8 +183,8 @@ _UserAppRun 1FF88 0 CODE 0 text1 dist/default/production\2021_ENCM369.production
 _ANSELA 400 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 _ANSELB 408 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 _G_u32SystemTime1s 509 0 COMRAM 1 bssCOMRAM dist/default/production\2021_ENCM369.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\kalef\AppData\Local\Temp\s1pc.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\kalef\AppData\Local\Temp\s1pc.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\kalef\AppData\Local\Temp\sgcc.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\kalef\AppData\Local\Temp\sgcc.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\2021_ENCM369.production.o
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\2021_ENCM369.production.o
 __size_of_UserAppInitialize 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
@@ -244,7 +244,7 @@ __Hbank36 0 0 ABS 0 bank36 dist/default/production\2021_ENCM369.production.o
 __Hbank37 0 0 ABS 0 bank37 dist/default/production\2021_ENCM369.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\2021_ENCM369.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\2021_ENCM369.production.o
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\kalef\AppData\Local\Temp\s1pc.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\kalef\AppData\Local\Temp\sgcc.o
 _SystemSleep 1FF12 0 CODE 0 text3 dist/default/production\2021_ENCM369.production.o
 __Hcomram 0 0 ABS 0 comram dist/default/production\2021_ENCM369.production.o
 __Hconfig 30000A 0 CONFIG 4 config dist/default/production\2021_ENCM369.production.o
@@ -338,8 +338,8 @@ __end_of_SysTickSetup 1FF66 0 CODE 0 text4 dist/default/production\2021_ENCM369.
 _UserAppInitialize 1FF14 0 CODE 0 text2 dist/default/production\2021_ENCM369.production.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\2021_ENCM369.production.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\2021_ENCM369.production.o
-stackhi 25FF 0 ABS 0 - C:\Users\kalef\AppData\Local\Temp\s1pc.o
-stacklo 560 0 ABS 0 - C:\Users\kalef\AppData\Local\Temp\s1pc.o
+stackhi 25FF 0 ABS 0 - C:\Users\kalef\AppData\Local\Temp\sgcc.o
+stacklo 560 0 ABS 0 - C:\Users\kalef\AppData\Local\Temp\sgcc.o
 __Lirdata 0 0 CODE 0 irdata dist/default/production\2021_ENCM369.production.o
 __Lspace_0 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __Lspace_1 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
@@ -362,7 +362,7 @@ __ptext4 1FF44 0 CODE 0 text4 dist/default/production\2021_ENCM369.production.o
 __ptext5 1FF28 0 CODE 0 text5 dist/default/production\2021_ENCM369.production.o
 __ptext6 1FF10 0 CODE 0 text6 dist/default/production\2021_ENCM369.production.o
 __Lstruct 0 0 COMRAM 1 struct dist/default/production\2021_ENCM369.production.o
-__ramtop 2600 0 RAM 0 ramtop C:\Users\kalef\AppData\Local\Temp\s1pc.o
+__ramtop 2600 0 RAM 0 ramtop C:\Users\kalef\AppData\Local\Temp\sgcc.o
 __Lpowerup 0 0 CODE 0 powerup dist/default/production\2021_ENCM369.production.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\2021_ENCM369.production.o
 _ClockSetup 1FF10 0 CODE 0 text6 dist/default/production\2021_ENCM369.production.o

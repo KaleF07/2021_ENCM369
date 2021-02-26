@@ -255,7 +255,7 @@ text6 1FF10 1FF11 CODE 1FF10 0
 %locals
 dist/default/production\2021_ENCM369.production.o
 C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h
-C:\Users\kalef\AppData\Local\Temp\s1pc.s
+C:\Users\kalef\AppData\Local\Temp\sgcc.s
 5088 1FF16 0 CODE 0
 5090 1FF16 0 CODE 0
 5093 1FF16 0 CODE 0
