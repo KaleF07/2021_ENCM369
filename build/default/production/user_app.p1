@@ -1,11 +1,10 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"45585 C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h
+"46157 C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h
+[; ;C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 46157: extern volatile unsigned char PORTB __attribute__((address(0x4CF)));
+[v _PORTB `Vuc ~T0 @X0 0 e@1231 ]
+"45585
 [; ;C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 45585: extern volatile unsigned char LATA __attribute__((address(0x4BE)));
 [v _LATA `Vuc ~T0 @X0 0 e@1214 ]
-[v F183 `(v ~T0 @X0 1 tf1`ul ]
-"12 C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\builtins.h
-[v __delay `JF183 ~T0 @X0 0 e ]
-[p i __delay ]
 "30 ./configuration.h
 [p x FEXTOSC  =  OFF     ]
 "31
@@ -2551,32 +2550,61 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _UserAppRun ]
 [f ]
 "97
-[; ;user_app.c: 97:    u8 u8counter = 0x80;
-[v _u8counter `uc ~T0 @X0 1 a ]
-[e = _u8counter -> -> 128 `i `uc ]
-"98
-[; ;user_app.c: 98:     while (u8counter < 0xC0) {
-[e $U 2274  ]
-[e :U 2275 ]
-{
+[; ;user_app.c: 97:     static u32 u32counter = 0x00;
+[v F15920 `ul ~T0 @X0 1 s u32counter ]
+[i F15920
+-> -> -> 0 `i `l `ul
+]
 "99
-[; ;user_app.c: 99:         LATA = u8counter;
-[e = _LATA _u8counter ]
+[; ;user_app.c: 99:     if (PORTB == 0) {
+[e $ ! == -> _PORTB `i -> 0 `i 2274  ]
+{
 "100
-[; ;user_app.c: 100:         _delay(0x291F12);
-[e ( __delay (1 -> -> 2694930 `l `ul ]
+[; ;user_app.c: 100:         u32counter = 0x01;
+[e = F15920 -> -> -> 1 `i `l `ul ]
 "101
-[; ;user_app.c: 101:         u8counter++;
-[e ++ _u8counter -> -> 1 `i `uc ]
-"102
-[; ;user_app.c: 102:     }
+[; ;user_app.c: 101:     }
 }
 [e :U 2274 ]
-"98
-[; ;user_app.c: 98:     while (u8counter < 0xC0) {
-[e $ < -> _u8counter `i -> 192 `i 2275  ]
+"103
+[; ;user_app.c: 103:     while(u32counter) {
+[e $U 2275  ]
 [e :U 2276 ]
+{
 "104
-[; ;user_app.c: 104: }
+[; ;user_app.c: 104:         if(PORTB) {
+[e $ ! != -> _PORTB `i -> 0 `i 2278  ]
+{
+"105
+[; ;user_app.c: 105:             LATA ++;
+[e ++ _LATA -> -> 1 `i `Vuc ]
+"106
+[; ;user_app.c: 106:             u32counter = 0x00;
+[e = F15920 -> -> -> 0 `i `l `ul ]
+"107
+[; ;user_app.c: 107:         }
+}
+[e :U 2278 ]
+"108
+[; ;user_app.c: 108:     }
+}
+[e :U 2275 ]
+"103
+[; ;user_app.c: 103:     while(u32counter) {
+[e $ != F15920 -> -> -> 0 `i `l `ul 2276  ]
+[e :U 2277 ]
+"110
+[; ;user_app.c: 110:     if (LATA == 0xC0) {
+[e $ ! == -> _LATA `i -> 192 `i 2279  ]
+{
+"111
+[; ;user_app.c: 111:         LATA = 0x80;
+[e = _LATA -> -> 128 `i `uc ]
+"112
+[; ;user_app.c: 112:     }
+}
+[e :U 2279 ]
+"113
+[; ;user_app.c: 113: }
 [e :UE 2273 ]
 }

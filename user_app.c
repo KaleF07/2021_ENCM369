@@ -94,13 +94,22 @@ Promises:
 */
 void UserAppRun(void)
 {
-   u8 u8counter = 0x80; // Initialize counter
-    while (u8counter < 0xC0) { // creates a while loop for counter < C0
-        LATA = u8counter;      // to ensure MSB stays on during the loop
-        _delay(0x291F12);
-        u8counter++;           // counter increases by one after every delay
-    } 
-
+    static u32 u32counter = 0x00; // Initialize counter
+    
+    if (PORTB == 0) { // while counter is set to 0
+        u32counter = 0x01;
+    }
+    
+    while(u32counter) { // while the counter is set to 1
+        if(PORTB) {
+            LATA ++; // increases count of LATA so next LED in order is turned on
+            u32counter = 0x00; // sets counter back to zero so the while loop breaks
+        }
+    }
+    
+    if (LATA == 0xC0) { // checks to see if LATA reached 192 (1100 000)
+        LATA = 0x80;// Sets the LED's back to 0 (RA0-RA0)
+    }
 } /* end UserAppRun */
 
 
