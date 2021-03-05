@@ -27289,6 +27289,7 @@ void SystemSleep(void);
 # 27 "./user_app.h"
 void UserAppInitialize(void);
 void UserAppRun(void);
+void TimeXus(u16 u16Time);
 # 106 "./configuration.h" 2
 # 26 "user_app.c" 2
 
@@ -27319,15 +27320,15 @@ void UserAppRun(void)
 {
    static u16 u16Counter = 0x0000;
    static int i = 0;
-   static u8 au8Pattern [] = {0x00, 0x0C, 0x00, 0x1E, 0x00, 0x3F, 0x00, 0x1E,
-   0x00, 0x0C, 0x00};
+   static u8 au8Pattern [] = {0x00, 0x0C, 0x1E, 0x3F, 0x1E, 0x0C};
 
-    if (u16Counter == 0x1F4) {
+    if (u16Counter == 0x1F4)
+    {
         LATA = au8Pattern[i];
         u16Counter = 0x0000;
         i++;
 
-        if (i == 11)
+        if (i == 6)
         {
             i = 0;
         }
@@ -27337,11 +27338,11 @@ void UserAppRun(void)
 
 }
 # 132 "user_app.c"
-void TimeXus(u16 u16TimeXus)
+void TimeXus(u16 u16Time)
 {
     T0CON0 &= 0x7F;
 
-    u16 u16userIN = 0xFFFF - u16TimeXus;
+    u16 u16userIN = 0xFFFF - u16Time;
     TMR0L = u16userIN & 0xFF;
     TMR0H = (u16userIN >> 8) & 0xFF;
 
