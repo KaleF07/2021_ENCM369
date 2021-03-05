@@ -27324,7 +27324,7 @@ void UserAppRun(void)
 
     if (u16Counter == 0x1F4) {
         LATA = au8Pattern[i];
-        u16Counter = 0x00;
+        u16Counter = 0x0000;
         i++;
 
         if (i == 11)

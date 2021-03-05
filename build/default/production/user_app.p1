@@ -2608,7 +2608,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;user_app.c: 105:         LATA = au8Pattern[i];
 [e = _LATA *U + &U F15922 * -> -> F15921 `ui `ux -> -> # *U &U F15922 `ui `ux ]
 "106
-[; ;user_app.c: 106:         u16Counter = 0x00;
+[; ;user_app.c: 106:         u16Counter = 0x0000;
 [e = F15920 -> -> 0 `i `us ]
 "107
 [; ;user_app.c: 107:         i++;
