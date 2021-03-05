@@ -27309,11 +27309,45 @@ extern volatile u32 G_u32SystemFlags;
 # 76 "user_app.c"
 void UserAppInitialize(void)
 {
-
+    LATA = 0x80;
+    T0CON0 = 0x90;
+    T0CON1 = 0x54;
 
 }
-# 95 "user_app.c"
+# 97 "user_app.c"
 void UserAppRun(void)
 {
+   static u16 u16Counter = 0x0000;
+   static int i = 0;
+   static u8 au8Pattern [] = {0x00, 0x0C, 0x00, 0x1E, 0x00, 0x3F, 0x00, 0x1E,
+   0x00, 0x0C, 0x00};
 
+    if (u16Counter == 0x1F4) {
+        LATA = au8Pattern[i];
+        u16Counter = 0x00;
+        i++;
+
+        if (i == 11)
+        {
+            i = 0;
+        }
+    }
+
+    u16Counter++;
+
+}
+# 132 "user_app.c"
+void TimeXus(u16 u16TimeXus)
+{
+    T0CON0 &= 0x7F;
+
+    u16 u16userIN = 0xFFFF - u16TimeXus;
+    TMR0L = u16userIN & 0xFF;
+    TMR0H = (u16userIN >> 8) & 0xFF;
+
+    PIR3 &= 0x7F;
+
+    T0CON0 |= 0x80;
+
+    while((PIR3 & 0x80) != 0x80) {}
 }

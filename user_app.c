@@ -75,7 +75,9 @@ Promises:
 */
 void UserAppInitialize(void)
 {
-
+    LATA = 0x80;
+    T0CON0 = 0x90;
+    T0CON1 = 0x54;
 
 } /* end UserAppInitialize() */
 
@@ -94,10 +96,53 @@ Promises:
 */
 void UserAppRun(void)
 {
+   static u16 u16Counter = 0x0000; // Initialize counter
+   static int i = 0;
+   static u8 au8Pattern [] = {0x00, 0x0C, 0x00, 0x1E, 0x00, 0x3F, 0x00, 0x1E, 
+   0x00, 0x0C, 0x00};
+   
+    if (u16Counter == 0x1F4) {
+        LATA = au8Pattern[i];
+        u16Counter = 0x00;
+        i++;
+        
+        if (i == 11)
+        {
+            i = 0;
+        }
+    }
+    
+    u16Counter++;
 
 } /* end UserAppRun */
 
+/*!--------------------------------------------------------------------------
+ * void TimeXus(INPUT_PARAMETER_)
+ * Sets Timer0 to count u16Microseconds_
+ * 
+ * Requires:
+ * -Timer0 configured such that each timer tick is 1 microsecond
+ * -INPUT_PARAMETER_is the value in microseconds to time from 1 to 65535
+ * 
+ * Promises:
+ * -Pre-loads TMR0H:L to clock out desired period
+ * -TMR0IF cleared-Timer0 enabled
+ */
 
+void TimeXus(u16 u16TimeXus)
+{
+    T0CON0 &= 0x7F;
+       
+    u16 u16userIN = 0xFFFF - u16TimeXus;
+    TMR0L = u16userIN & 0xFF;
+    TMR0H = (u16userIN >> 8) & 0xFF;
+       
+    PIR3 &= 0x7F;
+       
+    T0CON0 |= 0x80;
+       
+    while((PIR3 & 0x80) != 0x80) {}
+}
 
 /*------------------------------------------------------------------------------------------------------------------*/
 /*! @privatesection */                                                                                            
