@@ -96,23 +96,17 @@ Promises:
 */
 void UserAppRun(void)
 {
-   static u16 u16Counter = 0x0000; // Initialize counter
-   static int i = 0;
-   static u8 au8Pattern [] = {0x0C, 0x1E, 0x3F, 0x1E, 0x0C, 0x00};
-   
-    if (u16Counter == 0x1F4) 
+    while (DAC1DATL < 0xFF)
     {
-        LATA = au8Pattern[i];
-        u16Counter = 0x0000;
-        i++;
-        
-        if (i == 6)
-        {
-            i = 0;
-        }
+        DAC1DATL ++;
+        TimeXus(0x04);
     }
     
-    u16Counter++;
+    while (DAC1DATL > 0x00)
+    {
+        DAC1DATL --;
+        TimeXus(0x04);
+    }
 
 } /* end UserAppRun */
 

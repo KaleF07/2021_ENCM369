@@ -27318,26 +27318,20 @@ void UserAppInitialize(void)
 # 97 "user_app.c"
 void UserAppRun(void)
 {
-   static u16 u16Counter = 0x0000;
-   static int i = 0;
-   static u8 au8Pattern [] = {0x00, 0x0C, 0x1E, 0x3F, 0x1E, 0x0C};
-
-    if (u16Counter == 0x1F4)
+    while (DAC1DATL <= 0xFF)
     {
-        LATA = au8Pattern[i];
-        u16Counter = 0x0000;
-        i++;
-
-        if (i == 6)
-        {
-            i = 0;
-        }
+        DAC1DATL ++;
+        TimeXus(0x04);
     }
 
-    u16Counter++;
+    while (DAC1DATL >= 0x00)
+    {
+        DAC1DATL --;
+        TimeXus(0x04);
+    }
 
 }
-# 132 "user_app.c"
+# 126 "user_app.c"
 void TimeXus(u16 u16Time)
 {
     T0CON0 &= 0x7F;
