@@ -56,14 +56,21 @@ void main(void)
     /* Applications */
     UserAppRun();
    
-#if 1 /* Trying to run as fast as possible */
-    /* Set the timer and wait out the period */
+#if 0   // Delay part to get triangle graph
+    HEARTBEAT_OFF();
+    SystemSleep();
+    TimeXus(0x03E8);
+    while(PIR3bits.TMR0IF == 0x00);
+    HEARTBEAT_ON();
+#endif
+    
+#if 0 // Delay part to get sawtooth
     TimeXus(2);
     while (PIR3bits.TMR0IF == 0x00);
     DAC1DATL += 4;
 #endif
     
-#if 0
+#if 1   // Delay part to get sin graph
     TimeXus(2);
     while(PIR3bits.TMR0IF == 0x00);
 #endif

@@ -27331,17 +27331,9 @@ void main(void)
 
 
     UserAppRun();
-
-
-
+# 74 "main.c"
     TimeXus(2);
-    while (PIR3bits.TMR0IF == 0x00);
-    DAC1DATL += 4;
-
-
-
-
-
+    while(PIR3bits.TMR0IF == 0x00);
 
   }
 

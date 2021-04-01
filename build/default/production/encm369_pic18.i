@@ -27311,7 +27311,7 @@ void GpioSetup(void)
 
 
     DAC1CON = 0xA0;
-    DAC1DATL = 0x00;
+
 
 }
 # 114 "encm369_pic18.c"

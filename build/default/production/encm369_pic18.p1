@@ -8,9 +8,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3236
 [; ;C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 3236: extern volatile unsigned char DAC1CON __attribute__((address(0x07F)));
 [v _DAC1CON `Vuc ~T0 @X0 0 e@127 ]
-"3158
-[; ;C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 3158: extern volatile unsigned char DAC1DATL __attribute__((address(0x07D)));
-[v _DAC1DATL `Vuc ~T0 @X0 0 e@125 ]
 "37 encm369_pic18.c
 [; ;encm369_pic18.c: 37: extern volatile u32 G_u32SystemTime1ms;
 [v _G_u32SystemTime1ms `Vul ~T0 @X0 0 e ]
@@ -2567,9 +2564,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "96
 [; ;encm369_pic18.c: 96:     DAC1CON = 0xA0;
 [e = _DAC1CON -> -> 160 `i `uc ]
-"97
-[; ;encm369_pic18.c: 97:     DAC1DATL = 0x00;
-[e = _DAC1DATL -> -> 0 `i `uc ]
 "99
 [; ;encm369_pic18.c: 99: }
 [e :UE 2273 ]

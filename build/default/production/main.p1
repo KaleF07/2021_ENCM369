@@ -29,9 +29,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "44887
 [; ;C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 44887: extern volatile PIR3bits_t PIR3bits __attribute__((address(0x4B1)));
 [v _PIR3bits `VS2124 ~T0 @X0 0 e@1201 ]
-"3158
-[; ;C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 3158: extern volatile unsigned char DAC1DATL __attribute__((address(0x07D)));
-[v _DAC1DATL `Vuc ~T0 @X0 0 e@125 ]
 "30 ./configuration.h
 [p x FEXTOSC  =  OFF     ]
 "31
@@ -2604,26 +2601,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 "57
 [; ;main.c: 57:     UserAppRun();
 [e ( _UserAppRun ..  ]
-"61
-[; ;main.c: 61:     TimeXus(2);
+"74
+[; ;main.c: 74:     TimeXus(2);
 [e ( _TimeXus (1 -> -> 2 `i `us ]
-"62
-[; ;main.c: 62:     while (PIR3bits.TMR0IF == 0x00);
+"75
+[; ;main.c: 75:     while(PIR3bits.TMR0IF == 0x00);
 [e $U 2276  ]
 [e :U 2277 ]
 [e :U 2276 ]
 [e $ == -> . . _PIR3bits 0 7 `i -> 0 `i 2277  ]
 [e :U 2278 ]
-"63
-[; ;main.c: 63:     DAC1DATL += 4;
-[e =+ _DAC1DATL -> -> 4 `i `Vuc ]
-"70
-[; ;main.c: 70:   }
+"77
+[; ;main.c: 77:   }
 }
 [e :U 2273 ]
 [e $U 2274  ]
 [e :U 2275 ]
-"72
-[; ;main.c: 72: }
+"79
+[; ;main.c: 79: }
 [e :UE 2272 ]
 }
