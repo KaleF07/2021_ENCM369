@@ -27310,7 +27310,7 @@ extern volatile u32 G_u32SystemFlags;
 # 76 "user_app.c"
 void UserAppInitialize(void)
 {
-    LATA = 0x80;
+
     T0CON0 = 0x90;
     T0CON1 = 0x54;
 
@@ -27318,23 +27318,27 @@ void UserAppInitialize(void)
 # 97 "user_app.c"
 void UserAppRun(void)
 {
-    while (DAC1DATL <= 0xFF)
+
+
+    while (DAC1DATL < 0xFF)
     {
         DAC1DATL ++;
-        TimeXus(0x04);
+        TimeXus(0x06);
+        while (PIR3bits.TMR0IF == 0x00);
     }
 
-    while (DAC1DATL >= 0x00)
+    if (DAC1DATL == 0xFF)
     {
-        DAC1DATL --;
-        TimeXus(0x04);
+        DAC1DATL == 0;
+        TimeXus(0x06);
+        while (PIR3bits.TMR0IF == 0x00);
     }
-
-}
 # 126 "user_app.c"
+}
+# 141 "user_app.c"
 void TimeXus(u16 u16Time)
 {
-    T0CON0 &= 0x7F;
+    T0CON0 = T0CON0 & 0x7F;
 
     u16 u16userIN = 0xFFFF - u16Time;
     TMR0L = u16userIN & 0xFF;
@@ -27344,5 +27348,7 @@ void TimeXus(u16 u16Time)
 
     T0CON0 |= 0x80;
 
-    while((PIR3 & 0x80) != 0x80) {}
+
+
+
 }

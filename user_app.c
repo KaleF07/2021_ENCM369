@@ -75,7 +75,7 @@ Promises:
 */
 void UserAppInitialize(void)
 {
-    LATA = 0x80;
+    //LATA = 0x80;
     T0CON0 = 0x90;
     T0CON1 = 0x54;
 
@@ -96,17 +96,32 @@ Promises:
 */
 void UserAppRun(void)
 {
+#if 1
+    // Graphic for sawtooth and triangle waveform
     while (DAC1DATL < 0xFF)
     {
         DAC1DATL ++;
         TimeXus(0x04);
+        while (PIR3bits.TMR0IF == 0x00);
     }
     
-    while (DAC1DATL > 0x00)
+    if (DAC1DATL == 0xFF)
     {
-        DAC1DATL --;
+        DAC1DATL == 0;
         TimeXus(0x04);
+        while (PIR3bits.TMR0IF == 0x00);
     }
+#endif
+    
+#if 0
+    // Graphing code for sinusoid
+    for(int i = 0; i < 256; i += 1)
+    {
+        DAC1DATL = UserApp_au8sinTable[i];
+        TimeXus(11);
+        while(PIR3bits.TMR0IF == 0);
+    }
+#endif
 
 } /* end UserAppRun */
 
@@ -125,7 +140,7 @@ void UserAppRun(void)
 
 void TimeXus(u16 u16Time)
 {
-    T0CON0 &= 0x7F;
+    T0CON0 = T0CON0 & 0x7F;
        
     u16 u16userIN = 0xFFFF - u16Time;
     TMR0L = u16userIN & 0xFF;
@@ -134,8 +149,10 @@ void TimeXus(u16 u16Time)
     PIR3 &= 0x7F;
        
     T0CON0 |= 0x80;
-       
+
+#if 0
     while((PIR3 & 0x80) != 0x80) {}
+#endif
 }
 
 /*------------------------------------------------------------------------------------------------------------------*/

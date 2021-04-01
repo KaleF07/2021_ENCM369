@@ -27334,10 +27334,14 @@ void main(void)
 
 
 
-    (LATA &= 0x7F);
-    SystemSleep();
-    TimeXus(0x03E8);
-    (LATA |= 0x80);
+    TimeXus(2);
+    while (PIR3bits.TMR0IF == 0x00);
+    DAC1DATL += 4;
+
+
+
+
+
 
   }
 

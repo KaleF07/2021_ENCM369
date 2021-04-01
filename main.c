@@ -56,13 +56,17 @@ void main(void)
     /* Applications */
     UserAppRun();
    
-     
-    /* System sleep */
-    HEARTBEAT_OFF();
-    SystemSleep();
-    TimeXus(0x03E8);
-    HEARTBEAT_ON();
+#if 1 /* Trying to run as fast as possible */
+    /* Set the timer and wait out the period */
+    TimeXus(2);
+    while (PIR3bits.TMR0IF == 0x00);
+    DAC1DATL += 4;
+#endif
     
+#if 0
+    TimeXus(2);
+    while(PIR3bits.TMR0IF == 0x00);
+#endif
   } /* end while(1) main super loop */
   
 } /* end main() */
