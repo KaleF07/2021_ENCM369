@@ -4,11 +4,15 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>../../../PIC_Activity3/Code/configuration.h</itemPath>
-      <itemPath>../../../PIC_Activity3/Code/encm369_pic18.h</itemPath>
-      <itemPath>../../../PIC_Activity3/Code/main.h</itemPath>
-      <itemPath>../../../PIC_Activity3/Code/typedefs.h</itemPath>
-      <itemPath>../../../PIC_Activity3/Code/user_app.h</itemPath>
+      <itemPath>configuration.h</itemPath>
+      <itemPath>encm369_pic18.h</itemPath>
+      <itemPath>main.h</itemPath>
+      <itemPath>typedefs.h</itemPath>
+      <itemPath>user_app.h</itemPath>
+      <itemPath>pic18f27q43.h</itemPath>
+      <itemPath>xc.h</itemPath>
+      <itemPath>interrupts.h</itemPath>
+      <itemPath>music.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -17,9 +21,10 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>../../../PIC_Activity3/Code/encm369_pic18.c</itemPath>
-      <itemPath>../../../PIC_Activity3/Code/main.c</itemPath>
-      <itemPath>../../../PIC_Activity3/Code/user_app.c</itemPath>
+      <itemPath>encm369_pic18.c</itemPath>
+      <itemPath>main.c</itemPath>
+      <itemPath>user_app.c</itemPath>
+      <itemPath>interrupts.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -28,7 +33,7 @@
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
-    <Elem>../../../PIC_Activity3/Code</Elem>
+    <Elem>.</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -44,7 +49,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC18F-Q_DFP" vendor="Microchip" version="1.8.154"/>
+        <pack name="PIC18F-Q_DFP" vendor="Microchip" version="1.9.175"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -202,8 +207,10 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-1ffff"/>
         <property key="memories.rww" value="true"/>
-        <property key="poweroptions.powerenable" value="false"/>
-        <property key="programmerToGoImageName" value="default_ptg"/>
+        <property key="poweroptions.powerenable" value="true"/>
+        <property key="programmerToGoFilePath"
+                  value="D:/_git/UofCencm369/2021_ENCM369/debug/default/PIC_Activity3_ptg"/>
+        <property key="programmerToGoImageName" value="PIC_Activity3_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.ledbrightness" value="5"/>
