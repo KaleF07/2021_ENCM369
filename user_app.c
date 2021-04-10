@@ -217,7 +217,7 @@ void UserAppInitialize(void)
     T1CON  = 0x31;  // b'00110001'
     
     // Test call to set frequency
-    //TimerInterruptXus(0x01, 1);
+    //InterruptTimerXus(0x0f, 1);
     
 } /* end UserAppInitialize() */
 
@@ -236,6 +236,7 @@ Promises:
 */
 void UserAppRun(void)
 {
+    
     u16 u16MusicArray[] = { C4, C4, G4, G4, A4, A4, G4, F4, F4, E4, E4, D4, D4, C4, NN };
     u16 u16NoteDuration[] = { N4, N4, N4, N4, N4, N4, N2, N4, N4, N4, N4, N4, N4, N2, N1 };
     static u16 u16note_timer = 0x00;
@@ -258,7 +259,7 @@ void UserAppRun(void)
     {
         u16note_timer = 0x00;
     }
-  
+
 } /* end UserAppRun() */
 
 

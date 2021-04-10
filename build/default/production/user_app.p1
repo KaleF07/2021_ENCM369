@@ -3046,8 +3046,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F15949 `us ~T0 @X0 -> 15 `i s ]
 [i F15949
 :U ..
-"239
-[; ;user_app.c: 239:     u16 u16MusicArray[] = { (u16)(u16)60, (u16)(u16)60, (u16)(u16)40, (u16)(u16)40, (u16)(u16)36, (u16)(u16)36, (u16)(u16)40, (u16)(u16)45, (u16)(u16)45, (u16)(u16)47, (u16)(u16)47, (u16)(u16)53, (u16)(u16)53, (u16)(u16)60, (u16)(u16)0 };
+"240
+[; ;user_app.c: 240:     u16 u16MusicArray[] = { (u16)(u16)60, (u16)(u16)60, (u16)(u16)40, (u16)(u16)40, (u16)(u16)36, (u16)(u16)36, (u16)(u16)40, (u16)(u16)45, (u16)(u16)45, (u16)(u16)47, (u16)(u16)47, (u16)(u16)53, (u16)(u16)53, (u16)(u16)60, (u16)(u16)0 };
 -> -> 60 `i `us
 -> -> 60 `i `us
 -> -> 40 `i `us
@@ -3070,8 +3070,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F15951 `us ~T0 @X0 -> 15 `i s ]
 [i F15951
 :U ..
-"240
-[; ;user_app.c: 240:     u16 u16NoteDuration[] = { (u16)((u16)2048 / 4), (u16)((u16)2048 / 4), (u16)((u16)2048 / 4), (u16)((u16)2048 / 4), (u16)((u16)2048 / 4), (u16)((u16)2048 / 4), (u16)((u16)2048 / 2), (u16)((u16)2048 / 4), (u16)((u16)2048 / 4), (u16)((u16)2048 / 4), (u16)((u16)2048 / 4), (u16)((u16)2048 / 4), (u16)((u16)2048 / 4), (u16)((u16)2048 / 2), (u16)((u16)2048) };
+"241
+[; ;user_app.c: 241:     u16 u16NoteDuration[] = { (u16)((u16)2048 / 4), (u16)((u16)2048 / 4), (u16)((u16)2048 / 4), (u16)((u16)2048 / 4), (u16)((u16)2048 / 4), (u16)((u16)2048 / 4), (u16)((u16)2048 / 2), (u16)((u16)2048 / 4), (u16)((u16)2048 / 4), (u16)((u16)2048 / 4), (u16)((u16)2048 / 4), (u16)((u16)2048 / 4), (u16)((u16)2048 / 4), (u16)((u16)2048 / 2), (u16)((u16)2048) };
 -> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
 -> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
 -> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
@@ -3091,75 +3091,75 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 [v _u16NoteDuration `us ~T0 @X0 -> 15 `i a ]
 [e = _u16NoteDuration F15951 ]
-"241
-[; ;user_app.c: 241:     static u16 u16note_timer = 0x00;
+"242
+[; ;user_app.c: 242:     static u16 u16note_timer = 0x00;
 [v F15953 `us ~T0 @X0 1 s u16note_timer ]
 [i F15953
 -> -> 0 `i `us
 ]
-"242
-[; ;user_app.c: 242:     static u16 u16length_timer = 0x00;
+"243
+[; ;user_app.c: 243:     static u16 u16length_timer = 0x00;
 [v F15954 `us ~T0 @X0 1 s u16length_timer ]
 [i F15954
 -> -> 0 `i `us
 ]
-"244
-[; ;user_app.c: 244:     InterruptTimerXus(u16MusicArray[u16note_timer], 1);
-[e ( _InterruptTimerXus (2 , *U + &U _u16MusicArray * -> F15953 `ux -> -> # *U &U _u16MusicArray `ui `ux -> -> 1 `i `a ]
 "245
-[; ;user_app.c: 245:     u16length_timer++;
+[; ;user_app.c: 245:     InterruptTimerXus(u16MusicArray[u16note_timer], 1);
+[e ( _InterruptTimerXus (2 , *U + &U _u16MusicArray * -> F15953 `ux -> -> # *U &U _u16MusicArray `ui `ux -> -> 1 `i `a ]
+"246
+[; ;user_app.c: 246:     u16length_timer++;
 [e ++ F15954 -> -> 1 `i `us ]
-"247
-[; ;user_app.c: 247:     if(u16length_timer == u16NoteDuration[u16note_timer])
-[e $ ! == -> F15954 `ui -> *U + &U _u16NoteDuration * -> F15953 `ux -> -> # *U &U _u16NoteDuration `ui `ux `ui 2278  ]
 "248
-[; ;user_app.c: 248:     {
-{
+[; ;user_app.c: 248:     if(u16length_timer == u16NoteDuration[u16note_timer])
+[e $ ! == -> F15954 `ui -> *U + &U _u16NoteDuration * -> F15953 `ux -> -> # *U &U _u16NoteDuration `ui `ux `ui 2278  ]
 "249
-[; ;user_app.c: 249:         u16note_timer++;
-[e ++ F15953 -> -> 1 `i `us ]
+[; ;user_app.c: 249:     {
+{
 "250
-[; ;user_app.c: 250:         u16length_timer = 0x00;
+[; ;user_app.c: 250:         u16note_timer++;
+[e ++ F15953 -> -> 1 `i `us ]
+"251
+[; ;user_app.c: 251:         u16length_timer = 0x00;
 [e = F15954 -> -> 0 `i `us ]
-"252
-[; ;user_app.c: 252:         for(int i=0; i<(u16)50; i++)
+"253
+[; ;user_app.c: 253:         for(int i=0; i<(u16)50; i++)
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
 [e $ < -> _i `ui -> -> -> 50 `i `us `ui 2279  ]
 [e $U 2280  ]
 [e :U 2279 ]
-"253
-[; ;user_app.c: 253:         {
-{
 "254
-[; ;user_app.c: 254:             InterruptTimerXus((u16)(u16)0, 1);
-[e ( _InterruptTimerXus (2 , -> -> 0 `i `us -> -> 1 `i `a ]
+[; ;user_app.c: 254:         {
+{
 "255
-[; ;user_app.c: 255:         }
+[; ;user_app.c: 255:             InterruptTimerXus((u16)(u16)0, 1);
+[e ( _InterruptTimerXus (2 , -> -> 0 `i `us -> -> 1 `i `a ]
+"256
+[; ;user_app.c: 256:         }
 }
 [e ++ _i -> 1 `i ]
 [e $ < -> _i `ui -> -> -> 50 `i `us `ui 2279  ]
 [e :U 2280 ]
 }
-"256
-[; ;user_app.c: 256:     }
+"257
+[; ;user_app.c: 257:     }
 }
 [e :U 2278 ]
-"257
-[; ;user_app.c: 257:     if(u16note_timer == 0x0f)
-[e $ ! == -> F15953 `ui -> -> 15 `i `ui 2282  ]
 "258
-[; ;user_app.c: 258:     {
-{
+[; ;user_app.c: 258:     if(u16note_timer == 0x0f)
+[e $ ! == -> F15953 `ui -> -> 15 `i `ui 2282  ]
 "259
-[; ;user_app.c: 259:         u16note_timer = 0x00;
-[e = F15953 -> -> 0 `i `us ]
+[; ;user_app.c: 259:     {
+{
 "260
-[; ;user_app.c: 260:     }
+[; ;user_app.c: 260:         u16note_timer = 0x00;
+[e = F15953 -> -> 0 `i `us ]
+"261
+[; ;user_app.c: 261:     }
 }
 [e :U 2282 ]
-"262
-[; ;user_app.c: 262: }
+"263
+[; ;user_app.c: 263: }
 [e :UE 2277 ]
 }

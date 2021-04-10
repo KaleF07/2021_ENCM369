@@ -212,21 +212,21 @@
 "237 C:\Users\kalef\OneDrive - University of Calgary\Year 2 (2020-2021)\Winter\ENCM 369\lc_Github\KaleF07\2021_ENCM369\user_app.c
 [v _UserAppRun UserAppRun `(v  1 e 1 0 ]
 {
-"252
+"253
 [v UserAppRun@i i `i  1 a 2 68 ]
-"240
+"241
 [v UserAppRun@u16NoteDuration u16NoteDuration `[15]us  1 a 30 38 ]
-"239
+"240
 [v UserAppRun@u16MusicArray u16MusicArray `[15]us  1 a 30 8 ]
 "238
 [v UserAppRun@F15949 F15949 `[15]us  1 s 30 F15949 ]
-"239
+"240
 [v UserAppRun@F15951 F15951 `[15]us  1 s 30 F15951 ]
-"241
-[v UserAppRun@u16note_timer u16note_timer `us  1 s 2 u16note_timer ]
 "242
+[v UserAppRun@u16note_timer u16note_timer `us  1 s 2 u16note_timer ]
+"243
 [v UserAppRun@u16length_timer u16length_timer `us  1 s 2 u16length_timer ]
-"262
+"263
 } 0
 "146
 [v _InterruptTimerXus InterruptTimerXus `(v  1 e 1 0 ]

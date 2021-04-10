@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.31 build 20201012212115 
-                                                                                               Fri Apr 09 23:00:33 2021
+                                                                                               Fri Apr 09 23:20:22 2021
 
 Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1 
      1                           	processor	18F27Q43
@@ -705,7 +705,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    671  000206                     _UserAppRun:
    672                           	callstack 124
    673  000206                     
-   674                           ;user_app.c: 239:     u16 u16MusicArray[] = { (u16)(u16)60, (u16)(u16)60, (u16)(u16)40, 
+   674                           ;user_app.c: 240:     u16 u16MusicArray[] = { (u16)(u16)60, (u16)(u16)60, (u16)(u16)40, 
       +                          (u16)(u16)40, (u16)(u16)36, (u16)(u16)36, (u16)(u16)40, (u16)(u16)45, (u16)(u16)45, (u16
       +                          )(u16)47, (u16)(u16)47, (u16)(u16)53, (u16)(u16)53, (u16)(u16)60, (u16)(u16)0 };
    675  000206  EE21  F17E         	lfsr	2,UserAppRun@F15949
@@ -716,7 +716,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    680  000214  06E8               	decf	wreg,f,c
    681  000216  E2FC               	bc	u131
    682                           
-   683                           ;user_app.c: 240:     u16 u16NoteDuration[] = { (u16)((u16)2048 / 4), (u16)((u16)2048 / 
+   683                           ;user_app.c: 241:     u16 u16NoteDuration[] = { (u16)((u16)2048 / 4), (u16)((u16)2048 / 
       +                          4), (u16)((u16)2048 / 4), (u16)((u16)2048 / 4), (u16)((u16)2048 / 4), (u16)((u16)2048 / 
       +                          4), (u16)((u16)2048 / 2), (u16)((u16)2048 / 4), (u16)((u16)2048 / 4), (u16)((u16)2048 / 
       +                          4), (u16)((u16)2048 / 4), (u16)((u16)2048 / 4), (u16)((u16)2048 / 4), (u16)((u16)2048 / 
@@ -729,8 +729,8 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    689  000226  06E8               	decf	wreg,f,c
    690  000228  E2FC               	bc	u141
    691  00022A                     
-   692                           ;user_app.c: 241:     static u16 u16note_timer = 0x00;;user_app.c: 242:     static u16 u
-      +                          16length_timer = 0x00;;user_app.c: 244:     InterruptTimerXus(u16MusicArray[u16note_time
+   692                           ;user_app.c: 242:     static u16 u16note_timer = 0x00;;user_app.c: 243:     static u16 u
+      +                          16length_timer = 0x00;;user_app.c: 245:     InterruptTimerXus(u16MusicArray[u16note_time
       +                          r], 1);
    693  00022A  90D8               	bcf	status,0,c
    694  00022C  3455               	rlcf	UserAppRun@u16note_timer^(0+1280),w,c
@@ -747,11 +747,11 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    705  00024A  6E04               	movwf	InterruptTimerXus@bContinuous_^(0+1280),c
    706  00024C  EC9F  F001         	call	_InterruptTimerXus	;wreg free
    707  000250                     
-   708                           ;user_app.c: 245:     u16length_timer++;
+   708                           ;user_app.c: 246:     u16length_timer++;
    709  000250  4A53               	infsnz	UserAppRun@u16length_timer^(0+1280),f,c
    710  000252  2A54               	incf	(UserAppRun@u16length_timer+1)^(0+1280),f,c
    711  000254                     
-   712                           ;user_app.c: 247:     if(u16length_timer == u16NoteDuration[u16note_timer])
+   712                           ;user_app.c: 248:     if(u16length_timer == u16NoteDuration[u16note_timer])
    713  000254  90D8               	bcf	status,0,c
    714  000256  3455               	rlcf	UserAppRun@u16note_timer^(0+1280),w,c
    715  000258  6ED9               	movwf	fsr2l,c
@@ -773,24 +773,24 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    731  00027A  EF5E  F001         	goto	l1079
    732  00027E                     u150:
    733  00027E                     
-   734                           ;user_app.c: 248:     {;user_app.c: 249:         u16note_timer++;
+   734                           ;user_app.c: 249:     {;user_app.c: 250:         u16note_timer++;
    735  00027E  4A55               	infsnz	UserAppRun@u16note_timer^(0+1280),f,c
    736  000280  2A56               	incf	(UserAppRun@u16note_timer+1)^(0+1280),f,c
    737  000282                     
-   738                           ;user_app.c: 250:         u16length_timer = 0x00;
+   738                           ;user_app.c: 251:         u16length_timer = 0x00;
    739  000282  0E00               	movlw	0
    740  000284  6E54               	movwf	(UserAppRun@u16length_timer+1)^(0+1280),c
    741  000286  0E00               	movlw	0
    742  000288  6E53               	movwf	UserAppRun@u16length_timer^(0+1280),c
    743  00028A                     
-   744                           ;user_app.c: 252:         for(int i=0; i<(u16)50; i++)
+   744                           ;user_app.c: 253:         for(int i=0; i<(u16)50; i++)
    745  00028A  0E00               	movlw	0
    746  00028C  6E46               	movwf	(UserAppRun@i+1)^(0+1280),c
    747  00028E  0E00               	movlw	0
    748  000290  6E45               	movwf	UserAppRun@i^(0+1280),c
    749  000292                     l1073:
    750                           
-   751                           ;user_app.c: 253:         {;user_app.c: 254:             InterruptTimerXus((u16)(u16)0, 
+   751                           ;user_app.c: 254:         {;user_app.c: 255:             InterruptTimerXus((u16)(u16)0, 
       +                          1);
    752  000292  0E00               	movlw	0
    753  000294  6E03               	movwf	(InterruptTimerXus@u16TimeXus_+1)^(0+1280),c
@@ -800,7 +800,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    757  00029C  6E04               	movwf	InterruptTimerXus@bContinuous_^(0+1280),c
    758  00029E  EC9F  F001         	call	_InterruptTimerXus	;wreg free
    759  0002A2                     
-   760                           ;user_app.c: 255:         }
+   760                           ;user_app.c: 256:         }
    761  0002A2  4A45               	infsnz	UserAppRun@i^(0+1280),f,c
    762  0002A4  2A46               	incf	(UserAppRun@i+1)^(0+1280),f,c
    763  0002A6  5046               	movf	(UserAppRun@i+1)^(0+1280),w,c
@@ -815,7 +815,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    772  0002BC                     u160:
    773  0002BC                     l1079:
    774                           
-   775                           ;user_app.c: 257:     if(u16note_timer == 0x0f)
+   775                           ;user_app.c: 258:     if(u16note_timer == 0x0f)
    776  0002BC  0E0F               	movlw	15
    777  0002BE  1855               	xorwf	UserAppRun@u16note_timer^(0+1280),w,c
    778  0002C0  1056               	iorwf	(UserAppRun@u16note_timer+1)^(0+1280),w,c
@@ -826,7 +826,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    783  0002CC  EF6C  F001         	goto	l131
    784  0002D0                     u170:
    785  0002D0                     
-   786                           ;user_app.c: 258:     {;user_app.c: 259:         u16note_timer = 0x00;
+   786                           ;user_app.c: 259:     {;user_app.c: 260:         u16note_timer = 0x00;
    787  0002D0  0E00               	movlw	0
    788  0002D2  6E56               	movwf	(UserAppRun@u16note_timer+1)^(0+1280),c
    789  0002D4  0E00               	movlw	0
@@ -3159,7 +3159,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.31 build 20201012212115 
-Symbol Table                                                                                   Fri Apr 09 23:00:33 2021
+Symbol Table                                                                                   Fri Apr 09 23:20:22 2021
 
               ??_InterruptSetup 0502           __size_of_SysTickSetup 0034               _InterruptTimerXus 033E  
                             l30 04B6                              l33 043C                              l27 04EC  
