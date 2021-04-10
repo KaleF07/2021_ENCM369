@@ -54,7 +54,6 @@ u8 G_au8UserAppsinTable[] =
 0x4f,0x52,0x55,0x58,0x5a,0x5d,0x61,0x64,0x67,0x6a,0x6d,0x70,0x73,0x76,0x79,0x7c   
 };
 
-
 /*--------------------------------------------------------------------------------------------------------------------*/
 /* Existing variables (defined in other files -- should all contain the "extern" keyword) */
 extern volatile u32 G_u32SystemTime1ms;                   /*!< @brief From main.c */
@@ -218,7 +217,7 @@ void UserAppInitialize(void)
     T1CON  = 0x31;  // b'00110001'
     
     // Test call to set frequency
- 
+    //TimerInterruptXus(0x01, 1);
     
 } /* end UserAppInitialize() */
 
@@ -237,7 +236,28 @@ Promises:
 */
 void UserAppRun(void)
 {
-
+    u16 u16MusicArray[] = { C4, C4, G4, G4, A4, A4, G4, F4, F4, E4, E4, D4, D4, C4, NN };
+    u16 u16NoteDuration[] = { N4, N4, N4, N4, N4, N4, N2, N4, N4, N4, N4, N4, N4, N2, N1 };
+    static u16 u16note_timer = 0x00;
+    static u16 u16length_timer = 0x00;
+    
+    InterruptTimerXus(u16MusicArray[u16note_timer], 1);
+    u16length_timer++;
+    
+    if(u16length_timer == u16NoteDuration[u16note_timer])
+    {
+        u16note_timer++;
+        u16length_timer = 0x00;
+        
+        for(int i=0; i<REGULAR_NOTE_ADJUSTMENT; i++)
+        {
+            InterruptTimerXus(NN, 1);
+        }
+    }
+    if(u16note_timer == 0x0f)
+    {
+        u16note_timer = 0x00;
+    }
   
 } /* end UserAppRun() */
 
